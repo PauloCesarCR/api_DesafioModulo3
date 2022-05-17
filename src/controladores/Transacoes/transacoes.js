@@ -84,7 +84,7 @@ const obterTransacao = async (req, res) => {
 
     res.status(200).json(transacaoFormatada)
   } catch (error) {
-    return res.status(400).json({ mensagem: error.message })
+    return res.status(400).json(error.message)
   }
 }
 
@@ -98,7 +98,7 @@ const listarTransacoes = async (req, res) => {
     }
     return res.status(200).json(transacoesDoUsuario)
   } catch (error) {
-    return res.status(400).json({ mensagem: error })
+    return res.status(400).json(error.message)
   }
 }
 
